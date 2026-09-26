@@ -1,0 +1,15 @@
+{
+  "name": "microservices-learning",
+  "type": "module",
+  "private": true,
+  "description": "Learning microservices: auth + hello + gateway",
+  "scripts": {
+    "start:auth": "node auth/index.js",
+    "start:hello": "node hello/index.js",
+    "start:gateway": "node gateway/index.js",
+    "start:all": "concurrently -n auth,hello,gw -c blue,green,yellow \"node auth/index.js\" \"node hello/index.js\" \"node gateway/index.js\""
+  },
+  "dependencies": {
+    "jose": "^6.0.0"
+  }
+}
